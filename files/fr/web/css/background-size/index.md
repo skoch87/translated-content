@@ -58,11 +58,11 @@ Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on
 ### Valeurs
 
 - `contain`
-  - : Un mot-clé qui redimensionne l'image afin qu'elle soit la plus grande possible et que l'image conserve ses proportions. L'image est contrainte dans le conteneur. Les zones éventuellement vides sont remplies avec la couleur d'arrière-plan (définie grâce à [`background-color`](/fr/docs/Web/CSS/background-color)). Par défaut, l'image est centrée sauf si [`background-position`](/fr/docs/Web/CSS/background-position) a été modifiée.
+  - : Redimensionne l'image afin qu'elle soit la plus grande possible dans le conteneur sans l'étirer ni la tronquer. L'image est répétée en mosaïque si le conteneur est plus grand que l'image à moins que [`background-repeat`](/fr/docs/Web/CSS/background-repeat) ait été défini à `no-repeat`. 
 - `cover`
-  - : Un mot-clé dont le comportement est opposé à celui de `contain`. L'image est redimensionnée pour être aussi grande que possible et pour conserver ses proportions. L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui dépassent sont rognées si les proportions du conteneur sont différentes (il n'y a aucun espace libre sur lequel on verrait la couleur d'arrière-plan).
+  - : L'image remplit le conteneur tout en conservant ses proportions. Aucun espace n'est laissé libre. C'est la largeur et/ou la hauteur du conteneur qui définit la plus petite dimension de l'image et celle-ci est éventuellement rognée dans sa largeur ou sa hauteur si le conteneur a des proportions différentes.
 - `auto`
-  - : Un mot-clé qui redimensionne l'image d'arrière-plan afin que ses proportions soient conservées.
+  - : Redimensionne l'image d'arrière-plan afin que ses proportions soient conservées.
 - `<length>`
   - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.
 - `<percentage>`
